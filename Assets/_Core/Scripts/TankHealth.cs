@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class TankHealth : MonoBehaviour
 {
+  [SerializeField] private int enemyNumber = 0;
+
   [Header("Values:")]
   [SerializeField] private float minHealth = 0f;
   [SerializeField] private float maxHealth = 100f;
@@ -56,6 +58,8 @@ public class TankHealth : MonoBehaviour
 
     // Disable the gameObject
     gameObject.SetActive(false);
+
+    FindObjectOfType<GameManager>().FinishRound(enemyNumber);
   }
 
   private bool IsDead()

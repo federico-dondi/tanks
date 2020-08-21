@@ -38,8 +38,8 @@ public class TankShoot : MonoBehaviour
     fireButton = "Fire " + playerNumber;
 
     chargeSpeed = (
-        maxLaunchForce -
-        minLaunchForce
+      maxLaunchForce -
+      minLaunchForce
     ) / maxChargingTime;
   }
 
@@ -51,7 +51,7 @@ public class TankShoot : MonoBehaviour
     {
       currentLaunchForce = maxLaunchForce;
 
-      // Instantiate the Shell GameObject
+      // Instantiate the shell GameObject
       Fire();
     }
     else if (Input.GetButtonDown(fireButton))
@@ -68,7 +68,7 @@ public class TankShoot : MonoBehaviour
     }
     else if (Input.GetButtonUp(fireButton) && !isFired)
     {
-      // Instantiate the Shell GameObject
+      // Instantiate the shell GameObject
       Fire();
     }
   }
