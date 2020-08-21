@@ -38,7 +38,11 @@ public class ShellDamage : MonoBehaviour
       }
     }
 
-    Instantiate(explosionPrefab);
+    Instantiate(
+      explosionPrefab,
+      transform.position,
+      transform.rotation
+    );
 
     // Destroy the gameObject
     Destroy(gameObject);
